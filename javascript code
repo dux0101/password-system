@@ -1,0 +1,21 @@
+// login.js
+
+// Define the username and password
+const USERNAME = 'myusername';
+const PASSWORD = 'mypassword';
+
+function login() {
+  // Get the values from the username and password input fields
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  // Check if the username and password match the defined values
+  if (username === USERNAME && password === PASSWORD) {
+    // Redirect to the main page if login is successful
+    window.location.href = 'main.html';
+  } else {
+    // Display an error message if the login fails
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.innerText = 'Incorrect username or password.';
+  }
+}
